@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPUTING Auth System | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 40px 28px;
+        }
+
+        .hero-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: #718096;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 0 28px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, rgba(66, 153, 225, 0.1) 0%, rgba(72, 187, 120, 0.1) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(66, 153, 225, 0.2);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4299e1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+
+        .nav-section {
+            padding: 0 28px 28px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            background: linear-gradient(135deg, rgba(66, 153, 225, 0.05) 0%, rgba(72, 187, 120, 0.05) 100%);
+            border: 2px solid rgba(66, 153, 225, 0.2);
+            border-radius: 10px;
+            padding: 18px;
+            text-decoration: none;
+            color: #2d3748;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .nav-item:hover {
+            border-color: #4299e1;
+            background: linear-gradient(135deg, rgba(66, 153, 225, 0.15) 0%, rgba(72, 187, 120, 0.15) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.2);
+        }
+
+        .nav-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .nav-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .nav-desc {
+            font-size: 11px;
+            color: #a0aec0;
+            margin-top: 4px;
+        }
+
+        .full-width-btn {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .full-width-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(247,250,252,0.5) 100%);
+            padding: 20px 28px;
+            border-radius: 0 0 16px 16px;
+            font-size: 13px;
+            color: #718096;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .info-section strong {
+            color: #4299e1;
+        }
+
+        .quick-access {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0 28px;
+            margin-bottom: 20px;
+        }
+
+        .quick-link {
+            background: rgba(66, 153, 225, 0.1);
+            border: 1px solid rgba(66, 153, 225, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 12px;
+            color: #4299e1;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            background: rgba(66, 153, 225, 0.2);
+            border-color: #4299e1;
+        }
+
+        @media (max-width: 480px) {
+            .stats-section,
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-access {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero-section">
+        <div class="hero-icon">🔐</div>
+        <h1 style="padding: 0; background: none; -webkit-text-fill-color: unset; text-align: center; color: #2d3748; margin-bottom: 0;">Home</h1>
+        <div class="welcome-banner" style="padding: 0; margin-top: 10px; margin-bottom: 20px;">
+            <p style="margin: 0;">Welcome to COMPUTING Authentication System</p>
+        </div>
+        <p class="hero-subtitle">Secure user management with modern design and real-time database tracking</p>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-box">
+            <div class="stat-number">✓</div>
+            <div class="stat-label">System Active</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">SQLite</div>
+            <div class="stat-label">Database</div>
+        </div>
+    </div>
+
+    <div class="nav-section">
+        <h2 style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: #718096; margin-bottom: 15px; text-align: center;">Quick Navigation</h2>
+        
+        <div class="nav-grid">
+            <a href="login.php" class="nav-item">
+                <div class="nav-icon">🔐</div>
+                <div class="nav-title">Sign In</div>
+                <div class="nav-desc">Login to your account</div>
+            </a>
+            <a href="register.php" class="nav-item">
+                <div class="nav-icon">📝</div>
+                <div class="nav-title">Register</div>
+                <div class="nav-desc">Create new account</div>
+            </a>
+            <a href="users.php" class="nav-item">
+                <div class="nav-icon">👥</div>
+                <div class="nav-title">Users</div>
+                <div class="nav-desc">View all users</div>
+            </a>
+            <a href="db_status.php" class="nav-item">
+                <div class="nav-icon">📊</div>
+                <div class="nav-title">DB Status</div>
+                <div class="nav-desc">Database info</div>
+            </a>
+            <a href="reset_password.php" class="nav-item">
+                <div class="nav-icon">🔑</div>
+                <div class="nav-title">Reset Pass</div>
+                <div class="nav-desc">Recover account</div>
+            </a>
+            <a href="welcome.php" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-title">Dashboard</div>
+                <div class="nav-desc">User dashboard</div>
+            </a>
+        </div>
+
+        <a href="login.php" class="full-width-btn">Get Started →</a>
+
+        <div class="quick-access">
+            <a href="login.php" class="quick-link">🔐 Login</a>
+            <a href="register.php" class="quick-link">📝 Register</a>
+            <a href="users.php" class="quick-link">👥 Users</a>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <p>Professional PHP authentication system with <strong>secure password hashing</strong>, <strong>email validation</strong>, and <strong>real-time user tracking</strong>.</p>
+        <p style="margin-top: 10px; font-size: 12px;">Database: <strong>SQLite</strong> | Language: <strong>PHP 7.4+</strong> | Status: <strong style="color: #48bb78;">✓ Operational</strong></p>
+    </div>
+</div>
+</body>
+</html>
